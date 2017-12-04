@@ -25,7 +25,7 @@ This is for educational and research purposes only. I am not responsible for mis
 
 ## Setup
 
-Edit the 'dumpa' and 'dumpb' variable values.
+Edit the `dumpa` and `dumpb` variable values.
 <br>
 ```
 dumpa = file A
