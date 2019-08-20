@@ -1,6 +1,6 @@
 # DB-Cross-Ref
 
-Database breach cross-reference tool
+<img src="banner.png" alt="Banner with logo">
 
 ## About
 
@@ -13,11 +13,11 @@ DB-Cross-Ref is a Python script that checks if the emails found in `file A` also
 
 Note that this relies on both files to have a maximum of one email per new line.
 <br>
-References to `Spotify-Account1.txt` and `000webhost.com.txt` already in the script are legitimate and left in as an example of how it should be used. The second file would be much larger than the first.
+References to `Spotify-Account1.txt` and `000webhost.com.txt` already in the script are legitimate and left in as an example.
 
 ## Disclaimer
 
-This is for educational and research purposes only. I am not responsible for misuse or damage caused by the program. 
+This is for educational and research purposes only. I am not responsible for misuse or damage caused by the involvement of this program. 
 
 ## Prerequisites
 
@@ -25,15 +25,11 @@ This is for educational and research purposes only. I am not responsible for mis
 
 ## Setup
 
-Edit the `dumpa` and `dumpb` variable values.
+Edit the `dumpa` and `dumpb` variable values with the name of the files you wish to utilise.
+<br>
+For example:
 <br>
 ```
-dumpa = file A
-dumpb = file B
+dumpa = 'file_a.txt'
+dumpb = 'file_b.txt'
 ```
-<br>
-For the differences, refer to the table in the `about` section of this file.
-
-## Known issues
-
-- If there is a duplicate email then it will count as an `invalid account`.
