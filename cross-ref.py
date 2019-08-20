@@ -6,7 +6,8 @@ dumpb = '000webhost.com.txt'
 
 totallines = 0
 validacc = 0
-dupacc = 0
+validdupacc = 0
+invaliddupacc = 0
 invalidacc = 0
 gatheredacca = 0
 gatheredaccb = 0
@@ -15,8 +16,9 @@ dumpamem = []
 dumpbmem = []
 
 matched = []
-duplicate = []
-unmatched = []
+validdup = []
+invaliddup = []
+mismatched = []
 
 re_pattern = re.compile(r'[\w\.+-]+@[\w\.-]+')
 
@@ -56,16 +58,21 @@ print('Verifying ...')
 for dumpadat in dumpamem:
     if dumpadat in dumpbmem:
         if dumpadat in matched:
-            duplicate.append(dumpadat)
-            dupacc += 1
+            validdup.append(dumpadat)
+            validdupacc += 1
         else:
             matched.append(dumpadat)
             validacc += 1
     else:
-        unmatched.append(dumpadat)
-        invalidacc += 1
+        if dumpadat in mismatched:
+            invaliddup.append(dumpadat)
+            invaliddupacc += 1
+        else:
+            mismatched.append(dumpadat)
+            invalidacc += 1
 
 print(' ')
-print('Matched account(s): ' + str(validacc))
-print('Duplicate account(s): ' + str(dupacc))
-print('Mismatched account(s): ' + str(invalidacc))
+print('Matched emails(s): ' + str(validacc))
+print('Matched duplicate emails(s): ' + str(validdupacc))
+print('Mismatched emails(s): ' + str(invalidacc))
+print('Mismatched duplicate emails(s): ' + str(invaliddupacc))
