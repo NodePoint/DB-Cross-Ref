@@ -15,6 +15,12 @@ Note that this relies on both files to have a maximum of one email per new line.
 <br>
 References to `Spotify-Account1.txt` and `000webhost.com.txt` already in the script are legitimate and left in as an example.
 
+The sort of counts that is returned:
+- Matched emails
+- Matched duplicate emails
+- Mismatched emails
+- Mismatched duplicate emails
+
 ## Disclaimer
 
 This is for educational and research purposes only. I am not responsible for misuse or damage caused by the involvement of this program. 
