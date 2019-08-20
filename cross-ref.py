@@ -72,7 +72,7 @@ for dumpadat in dumpamem:
             invalidacc += 1
 
 print(' ')
-print('Matched emails(s): ' + str(validacc))
-print('Matched duplicate emails(s): ' + str(validdupacc))
-print('Mismatched emails(s): ' + str(invalidacc))
-print('Mismatched duplicate emails(s): ' + str(invaliddupacc))
+print('Matched emails: ' + str(validacc))
+print('Matched duplicate emails: ' + str(validdupacc))
+print('Mismatched emails: ' + str(invalidacc))
+print('Mismatched duplicate emails: ' + str(invaliddupacc))
